@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="EU4\Region.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
+    <ClInclude Include="EU4\RegionCollection.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="EU4\ProvinceIDCollection.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="EU4">
+      <UniqueIdentifier>{dc1a97a5-be43-440f-b43f-2f9b66c33347}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EU4\Region.cpp">
+      <Filter>EU4</Filter>
+    </ClCompile>
+    <ClCompile Include="EU4\RegionCollection.cpp">
+      <Filter>EU4</Filter>
+    </ClCompile>
+    <ClCompile Include="SemiPlausible_Randomizer.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="EU4\ProvinceIDCollection.cpp">
+      <Filter>EU4</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

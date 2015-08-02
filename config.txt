@@ -1,0 +1,7 @@
+EU4Path = G:\SteamLibrary\SteamApps\common\Europa Universalis IV
+
+generate = {
+  region = british_isles 
+  region = breton_region
+  provinces = { 87 168 }
+}
