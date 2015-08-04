@@ -5,6 +5,7 @@
 #include <ParadoxNode\ParadoxNode.h>
 
 #include "Config.h"
+#include "EU4\ProvinceCollection.h"
 #include "EU4\ProvinceIDCollection.h"
 #include "EU4\RegionCollection.h"
 
@@ -16,13 +17,16 @@ int main(int argc, char** argv)
 
     EU4::RegionCollection regions(*ParadoxNode::ParseFromFile(config.GetEU4Path() + "map\\region.txt"));
     
-    EU4::ProvinceIDCollection generateProvinces;
+    EU4::ProvinceIDCollection generateProvinceIDs;
     for (const auto& provinceID : config.GetProvincesToGenerate())
-      generateProvinces.AddProvince(provinceID);
+      generateProvinceIDs.AddProvince(provinceID);
     for (const auto& regionName : config.GetRegionsToGenerate())
-      generateProvinces.AddRegion(regions, regionName);
+      generateProvinceIDs.AddRegion(regions, regionName);
 
-    std::cout << "Generating for provinces: " << generateProvinces << '\n';
+    std::cout << "Generating for provinces: " << generateProvinceIDs << '\n';
+
+    EU4::ProvinceCollection provinces(generateProvinceIDs.GetProvinceIDs(), config.GetEU4Path() + "history\\provinces\\");
+    provinces.ClearTags();
   }
   catch (std::exception& e)
   {

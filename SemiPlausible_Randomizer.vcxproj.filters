@@ -11,6 +11,14 @@
     <ClInclude Include="EU4\ProvinceIDCollection.h">
       <Filter>EU4</Filter>
     </ClInclude>
+    <ClInclude Include="EU4\Province.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
+    <ClInclude Include="EU4\ProvinceCollection.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
+    <ClInclude Include="FileUtilities.h" />
+    <ClInclude Include="StringUtilities.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EU4">
@@ -29,5 +37,13 @@
     <ClCompile Include="EU4\ProvinceIDCollection.cpp">
       <Filter>EU4</Filter>
     </ClCompile>
+    <ClCompile Include="EU4\Province.cpp">
+      <Filter>EU4</Filter>
+    </ClCompile>
+    <ClCompile Include="EU4\ProvinceCollection.cpp">
+      <Filter>EU4</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUtilities.cpp" />
+    <ClCompile Include="StringUtilities.cpp" />
   </ItemGroup>
 </Project>

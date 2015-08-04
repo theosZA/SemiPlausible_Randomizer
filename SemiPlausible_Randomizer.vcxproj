@@ -12,16 +12,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />
+    <ClInclude Include="EU4\Province.h" />
+    <ClInclude Include="EU4\ProvinceCollection.h" />
     <ClInclude Include="EU4\ProvinceIDCollection.h" />
     <ClInclude Include="EU4\Region.h" />
     <ClInclude Include="EU4\RegionCollection.h" />
+    <ClInclude Include="FileUtilities.h" />
+    <ClInclude Include="StringUtilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Config.cpp" />
+    <ClCompile Include="EU4\Province.cpp" />
+    <ClCompile Include="EU4\ProvinceCollection.cpp" />
     <ClCompile Include="EU4\ProvinceIDCollection.cpp" />
     <ClCompile Include="EU4\Region.cpp" />
     <ClCompile Include="EU4\RegionCollection.cpp" />
+    <ClCompile Include="FileUtilities.cpp" />
     <ClCompile Include="SemiPlausible_Randomizer.cpp" />
+    <ClCompile Include="StringUtilities.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DF739DBD-8439-46EF-B33D-83E8E3C6ADE2}</ProjectGuid>
