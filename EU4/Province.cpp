@@ -52,6 +52,13 @@ void Province::ClearTags()
   coreTags.clear();  
 }
 
+void Province::SetFullOWner(const std::string& tag)
+{
+  ownerTag = tag;
+  controllerTag = tag;
+  coreTags.insert(tag);
+}
+
 std::shared_ptr<ParadoxNode> Province::CreateHistoryNode() const
 {
   auto history = ParadoxNode::CreateRoot();

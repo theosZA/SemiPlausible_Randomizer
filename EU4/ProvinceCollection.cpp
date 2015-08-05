@@ -1,5 +1,8 @@
 #include "ProvinceCollection.h"
 
+#include <fstream>
+#include <stdexcept>
+
 #include <ParadoxNode\ParadoxNode.h>
 
 #include "FileUtilities.h"
@@ -33,6 +36,28 @@ void ProvinceCollection::ClearTags()
 {
   for (auto& province : provinces)
     province.second.ClearTags();
+}
+
+void ProvinceCollection::SetFullOWner(int provinceID, const std::string& tag)
+{
+  auto findIter = provinces.find(provinceID);
+  if (findIter == provinces.end())
+    throw std::runtime_error("Province " + std::to_string(provinceID) + " no found");
+  findIter->second.SetFullOWner(tag);
+}
+
+void ProvinceCollection::WriteProvincesHistory(const std::string& provincesHistoryPath) const
+{
+  for (const auto& province : provinces)
+  {
+    auto fileNameFindIter = provinceHistoryFileNames.find(province.first);
+    if (fileNameFindIter != provinceHistoryFileNames.end())
+    {
+      auto fileName = provincesHistoryPath + fileNameFindIter->second;
+      std::ofstream provinceFile(fileName);
+      provinceFile << province.second.CreateHistoryNode();
+    }
+  }
 }
 
 } // EU4
