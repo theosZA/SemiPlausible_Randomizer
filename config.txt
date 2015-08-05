@@ -1,3 +1,4 @@
+Output = SP_R-Test
 EU4Path = G:\SteamLibrary\SteamApps\common\Europa Universalis IV
 
 generate = {

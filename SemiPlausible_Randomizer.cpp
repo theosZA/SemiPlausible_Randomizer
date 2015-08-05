@@ -1,4 +1,3 @@
-#include <fstream>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -9,7 +8,7 @@
 #include "EU4\ProvinceCollection.h"
 #include "EU4\ProvinceIDCollection.h"
 #include "EU4\RegionCollection.h"
-#include "FileUtilities.h"
+#include "Mod.h"
 
 int main(int argc, char** argv)
 {
@@ -33,19 +32,8 @@ int main(int argc, char** argv)
     for (auto provinceID : generateProvinceIDs.GetProvinceIDs())
       provinces.SetFullOWner(provinceID, "CAN");
 
-    FileUtilities::MakeFolder("Output");
-    std::ofstream modFile("Output\\TestMod.mod");
-    auto modRoot = ParadoxNode::CreateRoot();
-    modRoot->AddChild(ParadoxNode::Create("name", "\"TestMod\""));
-    modRoot->AddChild(ParadoxNode::Create("path", "\"mod/TestMod\""));
-    modRoot->AddChild(ParadoxNode::Create("disable_time_widget", "yes"));
-    modRoot->AddChild(ParadoxNode::Create("supported_version", "1.12"));
-    modFile << modRoot;
-
-    FileUtilities::MakeFolder("Output\\TestMod");
-    FileUtilities::MakeFolder("Output\\TestMod\\history");
-    FileUtilities::MakeFolder("Output\\TestMod\\history\\provinces");
-    provinces.WriteProvincesHistory("Output\\TestMod\\history\\provinces\\");
+    Mod mod(config.GetModName(), provinces);
+    mod.WriteMod(config.GetEU4Path() + "mod\\");
   }
   catch (std::exception& e)
   {

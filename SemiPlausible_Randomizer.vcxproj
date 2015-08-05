@@ -17,7 +17,9 @@
     <ClInclude Include="EU4\ProvinceIDCollection.h" />
     <ClInclude Include="EU4\Region.h" />
     <ClInclude Include="EU4\RegionCollection.h" />
+    <ClInclude Include="EU4\SupportedVersion.h" />
     <ClInclude Include="FileUtilities.h" />
+    <ClInclude Include="Mod.h" />
     <ClInclude Include="StringUtilities.h" />
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +30,7 @@
     <ClCompile Include="EU4\Region.cpp" />
     <ClCompile Include="EU4\RegionCollection.cpp" />
     <ClCompile Include="FileUtilities.cpp" />
+    <ClCompile Include="Mod.cpp" />
     <ClCompile Include="SemiPlausible_Randomizer.cpp" />
     <ClCompile Include="StringUtilities.cpp" />
   </ItemGroup>

@@ -19,6 +19,10 @@
     </ClInclude>
     <ClInclude Include="FileUtilities.h" />
     <ClInclude Include="StringUtilities.h" />
+    <ClInclude Include="Mod.h" />
+    <ClInclude Include="EU4\SupportedVersion.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EU4">
@@ -45,5 +49,6 @@
     </ClCompile>
     <ClCompile Include="FileUtilities.cpp" />
     <ClCompile Include="StringUtilities.cpp" />
+    <ClCompile Include="Mod.cpp" />
   </ItemGroup>
 </Project>

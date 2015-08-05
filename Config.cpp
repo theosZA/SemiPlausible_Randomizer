@@ -5,7 +5,8 @@
 #include <ParadoxNode\ParadoxNode.h>
 
 Config::Config(const ParadoxNode& node)
-: eu4Path(node.GetChild("EU4Path")->GetValue())
+: modName(node.GetChild("Output")->GetValue()),
+  eu4Path(node.GetChild("EU4Path")->GetValue())
 {
   // Paths must end in a backslash.
   if (!eu4Path.empty() && eu4Path.back() != '\\')
