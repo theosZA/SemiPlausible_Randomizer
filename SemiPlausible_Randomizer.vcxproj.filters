@@ -23,6 +23,14 @@
     <ClInclude Include="EU4\SupportedVersion.h">
       <Filter>EU4</Filter>
     </ClInclude>
+    <ClInclude Include="ProtoCountry.h" />
+    <ClInclude Include="ProtoCountryCollection.h" />
+    <ClInclude Include="EU4\Country.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
+    <ClInclude Include="EU4\CountryCollection.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EU4">
@@ -50,5 +58,13 @@
     <ClCompile Include="FileUtilities.cpp" />
     <ClCompile Include="StringUtilities.cpp" />
     <ClCompile Include="Mod.cpp" />
+    <ClCompile Include="ProtoCountry.cpp" />
+    <ClCompile Include="ProtoCountryCollection.cpp" />
+    <ClCompile Include="EU4\Country.cpp">
+      <Filter>EU4</Filter>
+    </ClCompile>
+    <ClCompile Include="EU4\CountryCollection.cpp">
+      <Filter>EU4</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -32,18 +32,26 @@ ProvinceCollection::ProvinceCollection(const std::set<int>& provinceIDs, const s
   }
 }
 
+const Province & ProvinceCollection::GetProvince(int provinceID) const
+{
+  auto findIter = provinces.find(provinceID);
+  if (findIter == provinces.end())
+    throw std::runtime_error("Province " + std::to_string(provinceID) + " not found");
+  return findIter->second;
+}
+
+Province & ProvinceCollection::GetProvince(int provinceID)
+{
+  auto findIter = provinces.find(provinceID);
+  if (findIter == provinces.end())
+    throw std::runtime_error("Province " + std::to_string(provinceID) + " not found");
+  return findIter->second;
+}
+
 void ProvinceCollection::ClearTags()
 {
   for (auto& province : provinces)
     province.second.ClearTags();
-}
-
-void ProvinceCollection::SetFullOWner(int provinceID, const std::string& tag)
-{
-  auto findIter = provinces.find(provinceID);
-  if (findIter == provinces.end())
-    throw std::runtime_error("Province " + std::to_string(provinceID) + " no found");
-  findIter->second.SetFullOWner(tag);
 }
 
 void ProvinceCollection::WriteProvincesHistory(const std::string& provincesHistoryPath) const

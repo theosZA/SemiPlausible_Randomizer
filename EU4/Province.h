@@ -17,6 +17,8 @@ public:
 
   int GetID() const { return id; }
   const std::string& GetName() const { return name; }
+  const std::string& GetCulture() const { return culture; }
+  const std::string& GetReligion() const { return religion; }
 
   // Removes all cores, owner and controller.
   void ClearTags();

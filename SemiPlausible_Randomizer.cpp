@@ -9,6 +9,7 @@
 #include "EU4\ProvinceIDCollection.h"
 #include "EU4\RegionCollection.h"
 #include "Mod.h"
+#include "ProtoCountryCollection.h"
 
 int main(int argc, char** argv)
 {
@@ -29,10 +30,13 @@ int main(int argc, char** argv)
     EU4::ProvinceCollection provinces(generateProvinceIDs.GetProvinceIDs(), config.GetEU4Path() + "history\\provinces\\");
     provinces.ClearTags();
 
-    for (auto provinceID : generateProvinceIDs.GetProvinceIDs())
-      provinces.SetFullOWner(provinceID, "CAN");
+    EU4::CountryCollection countries;
 
-    Mod mod(config.GetModName(), provinces);
+    ProtoCountryCollection protoCountries;
+    protoCountries.GenerateFromProvinces(provinces, generateProvinceIDs.GetProvinceIDs());
+    protoCountries.CreateCountries(countries);
+
+    Mod mod(config.GetModName(), countries, provinces);
     mod.WriteMod(config.GetEU4Path() + "mod\\");
   }
   catch (std::exception& e)

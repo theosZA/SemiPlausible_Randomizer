@@ -12,6 +12,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />
+    <ClInclude Include="EU4\Country.h" />
+    <ClInclude Include="EU4\CountryCollection.h" />
     <ClInclude Include="EU4\Province.h" />
     <ClInclude Include="EU4\ProvinceCollection.h" />
     <ClInclude Include="EU4\ProvinceIDCollection.h" />
@@ -20,10 +22,14 @@
     <ClInclude Include="EU4\SupportedVersion.h" />
     <ClInclude Include="FileUtilities.h" />
     <ClInclude Include="Mod.h" />
+    <ClInclude Include="ProtoCountry.h" />
+    <ClInclude Include="ProtoCountryCollection.h" />
     <ClInclude Include="StringUtilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Config.cpp" />
+    <ClCompile Include="EU4\Country.cpp" />
+    <ClCompile Include="EU4\CountryCollection.cpp" />
     <ClCompile Include="EU4\Province.cpp" />
     <ClCompile Include="EU4\ProvinceCollection.cpp" />
     <ClCompile Include="EU4\ProvinceIDCollection.cpp" />
@@ -31,6 +37,8 @@
     <ClCompile Include="EU4\RegionCollection.cpp" />
     <ClCompile Include="FileUtilities.cpp" />
     <ClCompile Include="Mod.cpp" />
+    <ClCompile Include="ProtoCountry.cpp" />
+    <ClCompile Include="ProtoCountryCollection.cpp" />
     <ClCompile Include="SemiPlausible_Randomizer.cpp" />
     <ClCompile Include="StringUtilities.cpp" />
   </ItemGroup>
