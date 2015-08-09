@@ -12,8 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />
+    <ClInclude Include="EU4\ByteStream.h" />
     <ClInclude Include="EU4\Country.h" />
     <ClInclude Include="EU4\CountryCollection.h" />
+    <ClInclude Include="EU4\Image.h" />
     <ClInclude Include="EU4\Province.h" />
     <ClInclude Include="EU4\ProvinceCollection.h" />
     <ClInclude Include="EU4\ProvinceIDCollection.h" />

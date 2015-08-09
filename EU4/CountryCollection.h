@@ -24,6 +24,8 @@ class CountryCollection
     void WriteHistory(const std::string& path) const;
     // Writes all countries' name and adjective for localisation.
     void WriteLocalisation(const std::string& fileName) const;
+    // Writes all countries' flags to files in TGA format.
+    void WriteFlags(const std::string& path) const;
 
   private:
     std::string PickNextTag();

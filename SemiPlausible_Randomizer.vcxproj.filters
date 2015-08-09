@@ -31,6 +31,12 @@
     <ClInclude Include="EU4\CountryCollection.h">
       <Filter>EU4</Filter>
     </ClInclude>
+    <ClInclude Include="EU4\Image.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
+    <ClInclude Include="EU4\ByteStream.h">
+      <Filter>EU4</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EU4">

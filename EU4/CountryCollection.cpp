@@ -69,6 +69,15 @@ void CountryCollection::WriteLocalisation(const std::string& fileName) const
   }
 }
 
+void CountryCollection::WriteFlags(const std::string& path) const
+{
+  for (const auto& countryPair : countries)
+  {
+    const auto& country = countryPair.second;
+    country.WriteFlagFile(path + country.GetTag() + ".tga");
+  }
+}
+
 std::string CountryCollection::PickNextTag()
 {
   auto tag = nextTag;

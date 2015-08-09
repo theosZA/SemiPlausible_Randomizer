@@ -1,5 +1,6 @@
 #include "Country.h"
 
+#include <fstream>
 #include <random>
 
 #include <ParadoxNode\ParadoxNode.h>
@@ -23,6 +24,8 @@ Country::Country(std::string tag, const Province& province, std::string religion
   std::uniform_int_distribution<> randomByte(0, 255);
   for (int i = 0; i < 3; ++i)
     colour.push_back(randomByte(randomEngine));
+
+  flag.Clear(colour[0], colour[1], colour[2]);
 }
 
 std::shared_ptr<ParadoxNode> Country::CreateCommonNode() const
@@ -41,6 +44,11 @@ std::shared_ptr<ParadoxNode> Country::CreateHistoryNode() const
   historyNode->AddChild(ParadoxNode::Create("religion", religion));
   historyNode->AddChild(ParadoxNode::Create("primary_culture", primaryCulture));
   return historyNode;
+}
+
+void Country::WriteFlagFile(const std::string& fileName) const
+{
+  flag.WriteTgaFile(fileName);
 }
 
 } // namespace EU4

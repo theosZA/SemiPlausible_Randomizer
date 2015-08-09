@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+#include "Image.h"
+
 class ParadoxNode;
 
 namespace EU4 {
@@ -29,11 +31,14 @@ public:
   std::shared_ptr<ParadoxNode> CreateCommonNode() const;
   // Returns a node with the country's history including current situation such as current government and religion.
   std::shared_ptr<ParadoxNode> CreateHistoryNode() const;
+  // Writes this country's flag to file in TGA format.
+  void WriteFlagFile(const std::string& fileName) const;
 
 private:
   std::string tag;
   std::string name;
   std::string adjective;
+  Image<128, 128> flag;
 
   // Common
   std::string graphicalCulture;

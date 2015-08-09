@@ -23,6 +23,8 @@ void Mod::WriteMod(const std::string& modsPath) const
   std::string countriesHistoryPath = historyPath + "countries\\";
   std::string provincesHistoryPath = historyPath + "provinces\\";
   std::string localisationPath = modPath + "localisation\\";
+  std::string graphicsPath = modPath + "gfx\\";
+  std::string flagsPath = graphicsPath + "flags\\";
 
   FileUtilities::MakeFolder(modsPath);
   FileUtilities::MakeFolder(modPath);
@@ -33,6 +35,8 @@ void Mod::WriteMod(const std::string& modsPath) const
   FileUtilities::MakeFolder(countriesHistoryPath);
   FileUtilities::MakeFolder(provincesHistoryPath);
   FileUtilities::MakeFolder(localisationPath);
+  FileUtilities::MakeFolder(graphicsPath);
+  FileUtilities::MakeFolder(flagsPath);
 
   WriteModFile(modsPath);
 
@@ -40,6 +44,7 @@ void Mod::WriteMod(const std::string& modsPath) const
   countries.WriteCommonInfo(countriesCommonPath);
   countries.WriteHistory(countriesHistoryPath);
   countries.WriteLocalisation(localisationPath + "sp_r_countries_l_english.yml");
+  countries.WriteFlags(flagsPath);
 
   provinces.WriteProvincesHistory(provincesHistoryPath);
 }
