@@ -16,6 +16,9 @@ class CountryCollection
     // Adds a new country based on the given province. Returns the new country's tag.
     std::string AddNewCountry(const Province&, std::string religion, std::string primaryCulture);
 
+    // Returns the country with the given tag.
+    const Country& GetCountry(const std::string& tag) const;
+
     // Writes all countries' tags.
     void WriteTags(const std::string& fileName) const;
     // Writes all countries' common information such as colour.

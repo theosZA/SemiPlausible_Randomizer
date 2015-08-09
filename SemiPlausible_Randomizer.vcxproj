@@ -12,21 +12,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />
-    <ClInclude Include="EU4\ByteStream.h" />
     <ClInclude Include="EU4\Country.h" />
     <ClInclude Include="EU4\CountryCollection.h" />
-    <ClInclude Include="EU4\Image.h" />
     <ClInclude Include="EU4\Province.h" />
     <ClInclude Include="EU4\ProvinceCollection.h" />
     <ClInclude Include="EU4\ProvinceIDCollection.h" />
     <ClInclude Include="EU4\Region.h" />
     <ClInclude Include="EU4\RegionCollection.h" />
     <ClInclude Include="EU4\SupportedVersion.h" />
-    <ClInclude Include="FileUtilities.h" />
     <ClInclude Include="Mod.h" />
     <ClInclude Include="ProtoCountry.h" />
     <ClInclude Include="ProtoCountryCollection.h" />
-    <ClInclude Include="StringUtilities.h" />
+    <ClInclude Include="Utility\ByteStream.h" />
+    <ClInclude Include="Utility\FileUtilities.h" />
+    <ClInclude Include="Utility\Image.h" />
+    <ClInclude Include="Utility\Log.h" />
+    <ClInclude Include="Utility\StringUtilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Config.cpp" />
@@ -37,12 +38,13 @@
     <ClCompile Include="EU4\ProvinceIDCollection.cpp" />
     <ClCompile Include="EU4\Region.cpp" />
     <ClCompile Include="EU4\RegionCollection.cpp" />
-    <ClCompile Include="FileUtilities.cpp" />
     <ClCompile Include="Mod.cpp" />
     <ClCompile Include="ProtoCountry.cpp" />
     <ClCompile Include="ProtoCountryCollection.cpp" />
     <ClCompile Include="SemiPlausible_Randomizer.cpp" />
-    <ClCompile Include="StringUtilities.cpp" />
+    <ClCompile Include="Utility\FileUtilities.cpp" />
+    <ClCompile Include="Utility\Log.cpp" />
+    <ClCompile Include="Utility\StringUtilities.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DF739DBD-8439-46EF-B33D-83E8E3C6ADE2}</ProjectGuid>

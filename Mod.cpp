@@ -5,7 +5,7 @@
 #include <ParadoxNode\ParadoxNode.h>
 
 #include "EU4\SupportedVersion.h"
-#include "FileUtilities.h"
+#include "Utility\FileUtilities.h"
 
 Mod::Mod(std::string modName, const EU4::CountryCollection& countries, const EU4::ProvinceCollection& provinces)
 : modName(std::move(modName)),

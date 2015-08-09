@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <fstream>
 
-#include "ByteStream.h"
+#include "Utility\ByteStream.h"
 
 // A simple bitmap image with pre-defined width and height.
 template<size_t width, size_t height>

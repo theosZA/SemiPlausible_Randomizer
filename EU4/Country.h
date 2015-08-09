@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "Image.h"
+#include "Utility\Image.h"
 
 class ParadoxNode;
 

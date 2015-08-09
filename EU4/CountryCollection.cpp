@@ -28,6 +28,14 @@ std::string CountryCollection::AddNewCountry(const Province& province, std::stri
   return tag;
 }
 
+const Country& CountryCollection::GetCountry(const std::string& tag) const
+{
+  auto findIter = countries.find(tag);
+  if (findIter == countries.end())
+    throw std::runtime_error("Country " + tag + " not found");
+  return findIter->second;
+}
+
 void CountryCollection::WriteTags(const std::string& fileName) const
 {
   auto tagsNode = ParadoxNode::CreateRoot();

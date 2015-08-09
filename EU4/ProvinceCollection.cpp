@@ -5,8 +5,8 @@
 
 #include <ParadoxNode\ParadoxNode.h>
 
-#include "FileUtilities.h"
-#include "StringUtilities.h"
+#include "Utility\StringUtilities.h"
+#include "Utility\FileUtilities.h"
 
 namespace EU4 {
 

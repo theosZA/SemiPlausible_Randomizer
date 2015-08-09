@@ -17,8 +17,6 @@
     <ClInclude Include="EU4\ProvinceCollection.h">
       <Filter>EU4</Filter>
     </ClInclude>
-    <ClInclude Include="FileUtilities.h" />
-    <ClInclude Include="StringUtilities.h" />
     <ClInclude Include="Mod.h" />
     <ClInclude Include="EU4\SupportedVersion.h">
       <Filter>EU4</Filter>
@@ -31,16 +29,28 @@
     <ClInclude Include="EU4\CountryCollection.h">
       <Filter>EU4</Filter>
     </ClInclude>
-    <ClInclude Include="EU4\Image.h">
-      <Filter>EU4</Filter>
+    <ClInclude Include="Utility\ByteStream.h">
+      <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="EU4\ByteStream.h">
-      <Filter>EU4</Filter>
+    <ClInclude Include="Utility\FileUtilities.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Image.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Log.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\StringUtilities.h">
+      <Filter>Utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EU4">
       <UniqueIdentifier>{dc1a97a5-be43-440f-b43f-2f9b66c33347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{95e4270a-533e-4808-ac15-e7fa2d1b5e53}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -61,8 +71,6 @@
     <ClCompile Include="EU4\ProvinceCollection.cpp">
       <Filter>EU4</Filter>
     </ClCompile>
-    <ClCompile Include="FileUtilities.cpp" />
-    <ClCompile Include="StringUtilities.cpp" />
     <ClCompile Include="Mod.cpp" />
     <ClCompile Include="ProtoCountry.cpp" />
     <ClCompile Include="ProtoCountryCollection.cpp" />
@@ -71,6 +79,15 @@
     </ClCompile>
     <ClCompile Include="EU4\CountryCollection.cpp">
       <Filter>EU4</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\FileUtilities.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Log.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\StringUtilities.cpp">
+      <Filter>Utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
