@@ -2,8 +2,12 @@
 
 #include <string>
 
-#include "EU4\CountryCollection.h"
-#include "EU4\ProvinceCollection.h"
+namespace EU4 {
+class CountryCollection;
+class ProvinceCollection;
+} // namespace EU4
+
+class Random;
 
 // A proto-country is an EU4 country being formed province by province.
 class ProtoCountry
@@ -13,7 +17,7 @@ public:
   ProtoCountry(EU4::ProvinceCollection&, int startingProvinceID);
 
   // Creates a new country with an appropriate tag, adding it to the given collection.
-  void CreateCountry(EU4::CountryCollection&);
+  void CreateCountry(EU4::CountryCollection&, Random&);
 
 private:
   std::string DetermineReligion() const;

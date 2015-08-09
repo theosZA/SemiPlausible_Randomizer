@@ -21,10 +21,10 @@ CountryCollection::CountryCollection()
 : nextTag("G01")
 {}
 
-std::string CountryCollection::AddNewCountry(const Province& province, std::string religion, std::string primaryCulture)
+std::string CountryCollection::AddNewCountry(const Province& province, std::string religion, std::string primaryCulture, Random& random)
 {
   auto tag = PickNextTag();
-  countries.emplace(tag, Country(tag, province, religion, primaryCulture));
+  countries.emplace(tag, Country(tag, province, religion, primaryCulture, random));
   return tag;
 }
 

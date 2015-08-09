@@ -8,6 +8,7 @@
 #include "Utility\Image.h"
 
 class ParadoxNode;
+class Random;
 
 namespace EU4 {
 
@@ -18,7 +19,7 @@ class Country
 {
 public:
   // Constructor for a new country based on a given province.
-  Country(std::string tag, const Province&, std::string religion, std::string primaryCulture);
+  Country(std::string tag, const Province&, std::string religion, std::string primaryCulture, Random&);
 
   // Returns this country's tag.
   const std::string& GetTag() const { return tag; }

@@ -27,6 +27,7 @@
     <ClInclude Include="Utility\FileUtilities.h" />
     <ClInclude Include="Utility\Image.h" />
     <ClInclude Include="Utility\Log.h" />
+    <ClInclude Include="Utility\Random.h" />
     <ClInclude Include="Utility\StringUtilities.h" />
   </ItemGroup>
   <ItemGroup>

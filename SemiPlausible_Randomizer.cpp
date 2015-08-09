@@ -11,11 +11,13 @@
 #include "Mod.h"
 #include "ProtoCountryCollection.h"
 #include "Utility\Log.h"
+#include "Utility\Random.h"
 
 int main(int argc, char** argv)
 {
   try
   {
+    Random random;
     Config config(*ParadoxNode::ParseFromFile("config.txt"));
 
     EU4::RegionCollection regions(*ParadoxNode::ParseFromFile(config.GetEU4Path() + "map\\region.txt"));
@@ -36,9 +38,9 @@ int main(int argc, char** argv)
 
     ProtoCountryCollection protoCountries;
     LOG(LogLevel::Info) << "Generating proto-countries";
-    protoCountries.GenerateFromProvinces(provinces, generateProvinceIDs.GetProvinceIDs());
+    protoCountries.GenerateFromProvinces(provinces, generateProvinceIDs.GetProvinceIDs(), random);
     LOG(LogLevel::Info) << "Creating countries";
-    protoCountries.CreateCountries(countries);
+    protoCountries.CreateCountries(countries, random);
 
     LOG(LogLevel::Info) << "Writing mod";
     Mod mod(config.GetModName(), countries, provinces);

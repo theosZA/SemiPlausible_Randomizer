@@ -5,6 +5,8 @@
 
 #include "EU4\Country.h"
 
+class Random;
+
 namespace EU4 {
 
 // Holds all the countries to be included in the EU4 mod.
@@ -14,7 +16,7 @@ class CountryCollection
     CountryCollection();
 
     // Adds a new country based on the given province. Returns the new country's tag.
-    std::string AddNewCountry(const Province&, std::string religion, std::string primaryCulture);
+    std::string AddNewCountry(const Province&, std::string religion, std::string primaryCulture, Random&);
 
     // Returns the country with the given tag.
     const Country& GetCountry(const std::string& tag) const;

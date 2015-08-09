@@ -44,6 +44,9 @@
     <ClInclude Include="Utility\StringUtilities.h">
       <Filter>Utility</Filter>
     </ClInclude>
+    <ClInclude Include="Utility\Random.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EU4">
