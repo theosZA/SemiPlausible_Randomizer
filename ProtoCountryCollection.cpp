@@ -16,8 +16,8 @@ void ProtoCountryCollection::GenerateFromProvinces(EU4::ProvinceCollection& prov
   }
 }
 
-void ProtoCountryCollection::CreateCountries(EU4::CountryCollection& countries, Random& random)
+void ProtoCountryCollection::CreateCountries(EU4::CountryCollection& countries, TagProvinceNameMapping& tagProvinceNameMapping, Random& random)
 {
   for (auto& protoCountry : protoCountries)
-    protoCountry.CreateCountry(countries, random);
+    protoCountry.ChooseOrCreateCountryFromCapital(countries, tagProvinceNameMapping, random);
 }

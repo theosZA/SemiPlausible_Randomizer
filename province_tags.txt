@@ -1,0 +1,346 @@
+# List of all tags whose country is named for a province.
+
+#Scandinavia
+FIN	= 27
+GOT	= 25
+SHL	= 1775
+KRL = 1776
+
+#Balkans
+ACH	= 1773
+ALB	= 143
+ATH	= 146
+BOS	= 140
+CEP	= 142
+CRT	= 163
+CYP	= 321
+EPI	= 144
+MOE	= 145
+MOL	= 268
+NAX	= 164
+RAG	= 137
+SER	= 141
+
+#British Isles 
+CNN = 376
+CRN	= 233
+LEI = 374
+LAN	= 244
+MNS = 375
+YOR	= 245
+NOL = 246
+MTH = 373
+
+#Eastern Europe
+DNZ	= 43
+KRA	= 262
+RIG	= 38
+VOL = 279
+KIE	= 280
+CHR	= 289
+
+#France 
+ALE = 1879
+ALS	= 75
+AMG	= 175
+AUV	= 199
+AVI	= 202
+BOU	= 190
+BUR	= 192
+CHP	= 186
+COR	= 1247
+DAU	= 204
+NEV	= 191
+NRM	= 168
+ORL	= 184
+PIC	= 89
+PRO	= 201
+TOU	= 196
+BER	= 179
+	
+#HRE
+AAC = 1878
+ANH	= 58
+ANS	= 71
+AUG = 1868
+BAD	= 74
+BRE	= 1874
+BRU	= 57
+EFR = 1931
+FRN	= 1876
+HAM	= 44
+HAN	= 1758
+HES	= 81
+KLE	= 2975
+KOL	= 85
+LAU = 1857
+LUN	= 53
+MAG	= 52
+MAI	= 78
+MUN	= 86
+OLD	= 55
+SLZ	= 76
+THU	= 63
+TIR	= 73
+TRI	= 80
+ULM = 1872
+WBG	= 79
+WES	= 82
+WUR	= 70
+NUM = 67
+MEM = 68
+NSA = 83
+	
+#Spain
+GRA	= 223
+NAV	= 210
+GAL	= 206
+LON = 208
+
+#Italy
+FER	= 113
+GEN	= 101
+MAN	= 109
+MLO	= 104
+MOD	= 106
+NAP	= 121
+PAR	= 105
+PIS	= 115
+SAV	= 205
+SIE	= 117
+URB	= 2977
+VEN	= 112
+MFA = 2981
+LUC = 2980
+
+#Low Countries
+BRB	= 92
+FRI	= 100
+GEL	= 99
+HAI	= 91
+HOL	= 97
+LIE	= 93
+LUX	= 94
+UTR	= 98
+
+#Russia
+AST	= 464
+CRI	= 284
+KAZ	= 1082
+MOS	= 295
+NOV	= 310
+PSK	= 274
+RYA	= 301
+TVE	= 294
+YAR	= 308
+ZAZ	= 283
+NOG	= 465
+SIB	= 1074
+PLT	= 275
+PRM = 305
+FEO	= 2410
+
+#Asia Minor		
+KAR	= 324
+TRE	= 330
+SRU	= 2297
+MEN	= 319
+	
+#Maghreb
+FEZ	= 343
+TRP	= 354
+TUN	= 341
+KBA = 339
+TFL = 346
+SOS = 348
+TLC = 336
+TGT = 2456
+GHD = 2450
+FZA = 2448
+MZB = 2457
+
+#Central Asia
+KHI	= 441
+KOK	= 458
+BUK = 442
+
+#Americas
+CHE = 935
+HUR = 988
+MAY = 1046
+ZAP = 844
+
+#Africa
+BEN = 1147
+LOA = 1166
+OYO = 1144
+SOF = 1186
+MBA = 1202
+MLI = 1203
+MDI = 1205
+
+#East African Additions
+
+DAR = 1219
+HOB = 2783
+KAF = 2757
+PTE = 2796
+BTI = 2771
+
+#Far East
+AYU	= 600
+BLI	= 631
+BAN	= 624
+BEI	= 636
+LUA	= 615
+MKS	= 641
+MLC	= 596
+PAT	= 594
+PEG	= 586
+RYU	= 1392
+SUK	= 601
+SUL	= 651
+TAU	= 585
+VIE	= 614
+
+#Mongol tags
+KAS = 2124
+CHH = 2115
+
+#Non-Han China proper tags
+CDL = 661
+
+#India
+BNG = 561
+BIJ = 569
+DLH = 522
+GOC = 542
+MYS = 533
+VIJ = 541
+AHM = 544
+ASS = 566
+JNP = 555
+MAD = 536
+MAW = 514
+MER = 2058
+MUL = 506
+JAN = 512
+GRJ = 2048
+KSH = 508
+KHD = 527
+VND = 537
+MAB = 534
+MEW = 520
+BDA = 516
+BST = 547
+BHU = 565
+BND = 559
+JSL = 513
+KMT = 562
+KGR = 509
+KAT = 521
+KOC = 535
+MLB = 2041
+HAD = 528
+NGA = 2066
+LDK = 2074
+GHR = 511
+CHD	= 2050
+NGP	= 560
+TRT = 2047
+BGA	= 2036
+TPR = 2091
+SDY = 2040
+
+#Misc Additions
+BAR	= 187
+SMO = 293
+NZH = 306
+KOJ = 379
+
+#Native American Additions
+APA = 879
+CAD = 894
+CHI = 919
+CHO = 920
+LEN = 956
+MAH = 963
+MIK = 985
+MMI = 943
+NAH = 878
+OJI = 1007
+OTT = 2587
+PAW = 901
+PIM = 877
+POT = 944
+POW = 952
+PUE = 880
+WCR = 1000
+
+#Persian Additions
+CIR = 463
+IME = 422
+
+#African Additions
+AIR = 2274
+BON = 2254
+DGB = 2256
+JNN = 1134
+KAN = 1155
+KNG = 1125
+KTS = 1149
+NUP = 1145
+TMB = 1132
+YAO = 2288
+YAT = 1135
+ZZZ = 1154
+NDO = 1171
+
+#Middle East Additions
+ARD = 2211
+SHM = 393
+
+#Indochina Additions
+AVA = 584
+HSE = 583
+JOH = 597
+KED = 2394
+MYA = 582
+PRK = 595
+
+#Siberian Tribes
+KMC = 1034
+
+#North American Additions
+ARP = 889
+CLM = 2657
+CNK = 873
+HDA = 2022
+KIO = 890
+MIX = 847
+SAL = 874
+TLA = 849
+TLX = 850
+WIC = 892
+
+#Indonesia Additions
+BLM = 627
+BTN = 2716
+CRB = 2688
+DMK = 629
+PGR = 2681
+PLB = 622
+PSA = 2673
+SAK = 620
+KUT = 638
+BNJ = 639
+LNO = 653
+MGD = 652
+TER = 649
+TID  = 650
+
+#South American Additions
+QTO = 820
+CJA = 813
+CYA = 2943
+CRA = 2942

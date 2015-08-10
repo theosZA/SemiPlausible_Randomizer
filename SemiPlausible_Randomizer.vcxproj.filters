@@ -47,6 +47,7 @@
     <ClInclude Include="Utility\Random.h">
       <Filter>Utility</Filter>
     </ClInclude>
+    <ClInclude Include="TagProvinceNameMapping.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EU4">
@@ -92,5 +93,6 @@
     <ClCompile Include="Utility\StringUtilities.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
+    <ClCompile Include="TagProvinceNameMapping.cpp" />
   </ItemGroup>
 </Project>

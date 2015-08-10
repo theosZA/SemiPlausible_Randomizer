@@ -18,7 +18,7 @@ std::string NormalizeName(const std::string& name)
 }
 
 CountryCollection::CountryCollection()
-: nextTag("G01")
+: nextTag("G00")
 {}
 
 std::string CountryCollection::AddNewCountry(const Province& province, std::string religion, std::string primaryCulture, Random& random)
@@ -97,6 +97,7 @@ std::string CountryCollection::PickNextTag()
     ++nextTag[1];
     if (nextTag[1] > '9')
     {
+      nextTag[1] = '0';
       ++nextTag[0];
       if (nextTag[0] > 'Z')
         throw std::runtime_error("Insufficient tags available");

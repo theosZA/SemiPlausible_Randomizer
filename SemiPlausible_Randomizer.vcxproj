@@ -23,6 +23,7 @@
     <ClInclude Include="Mod.h" />
     <ClInclude Include="ProtoCountry.h" />
     <ClInclude Include="ProtoCountryCollection.h" />
+    <ClInclude Include="TagProvinceNameMapping.h" />
     <ClInclude Include="Utility\ByteStream.h" />
     <ClInclude Include="Utility\FileUtilities.h" />
     <ClInclude Include="Utility\Image.h" />
@@ -43,6 +44,7 @@
     <ClCompile Include="ProtoCountry.cpp" />
     <ClCompile Include="ProtoCountryCollection.cpp" />
     <ClCompile Include="SemiPlausible_Randomizer.cpp" />
+    <ClCompile Include="TagProvinceNameMapping.cpp" />
     <ClCompile Include="Utility\FileUtilities.cpp" />
     <ClCompile Include="Utility\Log.cpp" />
     <ClCompile Include="Utility\StringUtilities.cpp" />

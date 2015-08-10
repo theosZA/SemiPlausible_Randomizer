@@ -10,7 +10,7 @@
 
 namespace EU4 {
 
-ProvinceCollection::ProvinceCollection(const std::set<int>& provinceIDs, const std::string & provincesHistoryPath)
+ProvinceCollection::ProvinceCollection(const std::set<int>& provinceIDs, const std::string& provincesHistoryPath)
 {
   auto provinceFileNames = FileUtilities::GetAllFilesInFolder(provincesHistoryPath);
   for (const auto& provinceFileName : provinceFileNames)

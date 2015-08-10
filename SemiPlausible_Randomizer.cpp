@@ -10,6 +10,7 @@
 #include "EU4\RegionCollection.h"
 #include "Mod.h"
 #include "ProtoCountryCollection.h"
+#include "TagProvinceNameMapping.h"
 #include "Utility\Log.h"
 #include "Utility\Random.h"
 
@@ -30,6 +31,9 @@ int main(int argc, char** argv)
       generateProvinceIDs.AddRegion(regions, regionName);
     LOG(LogLevel::Debug) << "Generate provinces: " << generateProvinceIDs;
 
+    LOG(LogLevel::Info) << "Reading province tags";
+    TagProvinceNameMapping tagProvinceNameMapping(*ParadoxNode::ParseFromFile("province_tags.txt"));
+
     LOG(LogLevel::Info) << "Reading EU4 provinces";
     EU4::ProvinceCollection provinces(generateProvinceIDs.GetProvinceIDs(), config.GetEU4Path() + "history\\provinces\\");
     provinces.ClearTags();
@@ -40,7 +44,7 @@ int main(int argc, char** argv)
     LOG(LogLevel::Info) << "Generating proto-countries";
     protoCountries.GenerateFromProvinces(provinces, generateProvinceIDs.GetProvinceIDs(), random);
     LOG(LogLevel::Info) << "Creating countries";
-    protoCountries.CreateCountries(countries, random);
+    protoCountries.CreateCountries(countries, tagProvinceNameMapping, random);
 
     LOG(LogLevel::Info) << "Writing mod";
     Mod mod(config.GetModName(), countries, provinces);
