@@ -5,13 +5,19 @@
 
 #include <ParadoxNode\ParadoxNode.h>
 
+#include "Utility\SimpleYaml.h"
 #include "Utility\StringUtilities.h"
 #include "Utility\FileUtilities.h"
 
 namespace EU4 {
 
-ProvinceCollection::ProvinceCollection(const std::set<int>& provinceIDs, const std::string& provincesHistoryPath)
+ProvinceCollection::ProvinceCollection(const std::set<int>& provinceIDs,
+                                       const std::string& provincesHistoryPath,
+                                       const std::string& localisationPath)
 {
+  auto provinceNames = SimpleYaml::ParseYamlFile(localisationPath + "prov_names_l_english.yml");
+  auto provinceAdjectives = SimpleYaml::ParseYamlFile(localisationPath + "prov_names_adj_l_english.yml");
+
   auto provinceFileNames = FileUtilities::GetAllFilesInFolder(provincesHistoryPath);
   for (const auto& provinceFileName : provinceFileNames)
   {
@@ -22,9 +28,10 @@ ProvinceCollection::ProvinceCollection(const std::set<int>& provinceIDs, const s
       auto extPos = provinceFileName.rfind('.');
       if (splitPos != std::string::npos && extPos != std::string::npos)
       {
-        auto provinceName = TrimWhitespace(provinceFileName.substr(splitPos + 1, extPos - (splitPos + 1)));
+        auto provinceName = provinceNames["PROV" + std::to_string(provinceID)];
+        auto provinceAdjective = provinceAdjectives["PROV_ADJ" + std::to_string(provinceID)];
         auto provinceFullPath = provincesHistoryPath + provinceFileName;
-        Province province(provinceID, provinceName, *ParadoxNode::ParseFromFile(provinceFullPath));
+        Province province(provinceID, provinceName, provinceAdjective, *ParadoxNode::ParseFromFile(provinceFullPath));
         provinces.emplace(provinceID, std::move(province));
         provinceHistoryFileNames[provinceID] = provinceFileName;
       }

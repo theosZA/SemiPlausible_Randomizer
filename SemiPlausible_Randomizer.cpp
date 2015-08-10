@@ -35,7 +35,9 @@ int main(int argc, char** argv)
     TagProvinceNameMapping tagProvinceNameMapping(*ParadoxNode::ParseFromFile("province_tags.txt"));
 
     LOG(LogLevel::Info) << "Reading EU4 provinces";
-    EU4::ProvinceCollection provinces(generateProvinceIDs.GetProvinceIDs(), config.GetEU4Path() + "history\\provinces\\");
+    EU4::ProvinceCollection provinces(generateProvinceIDs.GetProvinceIDs(),
+                                      config.GetEU4Path() + "history\\provinces\\",
+                                      config.GetEU4Path() + "localisation\\");
     provinces.ClearTags();
 
     EU4::CountryCollection countries;

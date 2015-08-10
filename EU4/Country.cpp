@@ -13,7 +13,7 @@ namespace EU4 {
 Country::Country(std::string tag, const Province& province, std::string religion, std::string primaryCulture, Random& random)
 : tag(std::move(tag)),
   name(province.GetName()),
-  adjective(province.GetName()),
+  adjective(province.GetAdjective()),
   graphicalCulture("westerngfx"),
   government("feudal_monarchy"),
   techGroup("western"),

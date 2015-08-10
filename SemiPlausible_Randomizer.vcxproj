@@ -29,6 +29,7 @@
     <ClInclude Include="Utility\Image.h" />
     <ClInclude Include="Utility\Log.h" />
     <ClInclude Include="Utility\Random.h" />
+    <ClInclude Include="Utility\SimpleYaml.h" />
     <ClInclude Include="Utility\StringUtilities.h" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +48,7 @@
     <ClCompile Include="TagProvinceNameMapping.cpp" />
     <ClCompile Include="Utility\FileUtilities.cpp" />
     <ClCompile Include="Utility\Log.cpp" />
+    <ClCompile Include="Utility\SimpleYaml.cpp" />
     <ClCompile Include="Utility\StringUtilities.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

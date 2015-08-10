@@ -13,10 +13,11 @@ class Province
 {
 public:
   // Constructor based on an existing EU4 province history.
-  Province(int id, const std::string& name, const ParadoxNode& history);
+  Province(int id, const std::string& name, const std::string& adjective, const ParadoxNode& history);
 
   int GetID() const { return id; }
   const std::string& GetName() const { return name; }
+  const std::string& GetAdjective() const { return adjective; }
   const std::string& GetCulture() const { return culture; }
   const std::string& GetReligion() const { return religion; }
 
@@ -31,6 +32,7 @@ public:
 private:
   int id;
   std::string name;
+  std::string adjective;
 
   std::string ownerTag;
   std::string controllerTag;

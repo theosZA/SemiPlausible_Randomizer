@@ -48,6 +48,9 @@
       <Filter>Utility</Filter>
     </ClInclude>
     <ClInclude Include="TagProvinceNameMapping.h" />
+    <ClInclude Include="Utility\SimpleYaml.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EU4">
@@ -94,5 +97,8 @@
       <Filter>Utility</Filter>
     </ClCompile>
     <ClCompile Include="TagProvinceNameMapping.cpp" />
+    <ClCompile Include="Utility\SimpleYaml.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

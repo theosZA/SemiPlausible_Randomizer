@@ -4,8 +4,8 @@
 
 namespace EU4 {
 
-Province::Province(int id, const std::string& name, const ParadoxNode& history)
-: id(id), name(name), hre(false), baseTax(0), baseProduction(0), baseManpower(0), extraCost(0)
+Province::Province(int id, const std::string& name, const std::string& adjective, const ParadoxNode& history)
+: id(id), name(name), adjective(adjective), hre(false), baseTax(0), baseProduction(0), baseManpower(0), extraCost(0)
 {
   for (const auto& item : history.GetChildren())
   {

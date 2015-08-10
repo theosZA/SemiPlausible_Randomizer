@@ -12,7 +12,9 @@ class ProvinceCollection
 {
 public:
   // Constructor creates all EU4 provinces from the specified set of province IDs.
-  ProvinceCollection(const std::set<int>& provinceIDs, const std::string& provincesHistoryPath);
+  ProvinceCollection(const std::set<int>& provinceIDs,
+                     const std::string& provincesHistoryPath,
+                     const std::string& localisationPath);
 
   // Returns the province with the given province ID.
   const Province& GetProvince(int provinceID) const;
