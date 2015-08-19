@@ -1,5 +1,6 @@
 #pragma once
 
+#include <map>
 #include <memory>
 #include <set>
 #include <string>
@@ -13,10 +14,10 @@ class Province
 {
 public:
   // Constructor based on an existing EU4 province history.
-  Province(int id, const std::string& name, const std::string& adjective, const ParadoxNode& history);
+  Province(int id, std::string name, std::string adjective, std::map<std::string, std::string> culturalNames, const ParadoxNode& history);
 
   int GetID() const { return id; }
-  const std::string& GetName() const { return name; }
+  const std::string& GetName(const std::string& culture = "") const;
   const std::string& GetAdjective() const { return adjective; }
   const std::string& GetCulture() const { return culture; }
   const std::string& GetReligion() const { return religion; }
@@ -33,6 +34,7 @@ private:
   int id;
   std::string name;
   std::string adjective;
+  std::map<std::string, std::string> culturalNames;
 
   std::string ownerTag;
   std::string controllerTag;

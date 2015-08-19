@@ -37,6 +37,7 @@ int main(int argc, char** argv)
     LOG(LogLevel::Info) << "Reading EU4 provinces";
     EU4::ProvinceCollection provinces(generateProvinceIDs.GetProvinceIDs(),
                                       config.GetEU4Path() + "history\\provinces\\",
+                                      config.GetEU4Path() + "common\\province_names\\",
                                       config.GetEU4Path() + "localisation\\");
     provinces.ClearTags();
 

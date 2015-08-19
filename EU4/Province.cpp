@@ -4,8 +4,9 @@
 
 namespace EU4 {
 
-Province::Province(int id, const std::string& name, const std::string& adjective, const ParadoxNode& history)
-: id(id), name(name), adjective(adjective), hre(false), baseTax(0), baseProduction(0), baseManpower(0), extraCost(0)
+Province::Province(int id, std::string name, std::string adjective, std::map<std::string, std::string> culturalNames, const ParadoxNode& history)
+: id(id), name(std::move(name)), adjective(std::move(adjective)), culturalNames(culturalNames),
+  hre(false), baseTax(0), baseProduction(0), baseManpower(0), extraCost(0)
 {
   for (const auto& item : history.GetChildren())
   {
@@ -43,6 +44,17 @@ Province::Province(int id, const std::string& name, const std::string& adjective
           permanentModifiers.insert(modifier->GetValue());
     }
   }
+}
+
+const std::string& Province::GetName(const std::string& culture) const
+{
+  if (!culture.empty())
+  {
+    auto findIter = culturalNames.find(culture);
+    if (findIter != culturalNames.end())
+      return findIter->second;
+  }
+  return name;
 }
 
 void Province::ClearTags()
